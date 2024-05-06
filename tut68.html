@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let pro1 = new Promise(function(resolve,reject){
+            console.log("first promise successfully")
+            setTimeout(()=>{
+                resolve(true);
+                // reject (new Error ("this is error"))
+            },2000)
+        })
+        let pro2 = new Promise(function(resolve,reject){
+            console.log("second promise run successfully")
+            setTimeout(()=>{
+                reject (new Error ("this is error"))
+            },2000)
+        })
+        // console.log(pro1,pro2)
+        // pro1.then((value)=>{
+        //     console.log(value);
+        // })
+        // pro1.catch((error)=>{
+        //     console.log("some error occured ")
+        // })
+        // pro2.then((value)=>{
+        //     console.log(value);
+        // })
+        // pro2.catch((error)=>{
+        //     console.log("some error occured ")
+        // })
+
+        // pro1.then((value)=>{
+        //     console.log(value)
+        // },(error)=>{
+        //     console.log(error)
+        // })
+        // pro2.then((value)=>{
+        //     console.log(value)
+        // },(error)=>{
+        //     console.log(error)
+        // })
+    </script>
+</body>
+</html>
